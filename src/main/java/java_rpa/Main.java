@@ -1,8 +1,9 @@
-package ru.consyst_os;
+package java_rpa;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,6 +28,7 @@ public class Main {
         String text = driver.findElement(By.xpath("//*[@id=\"search-result\"]/li[1]/div/div[2]/div/a[1]/div[1]")).getText();
 
         log.info("Температура = " + text);
+        log.info("Example log from {}", Main.class.getSimpleName());
 
         //driver.close();
         driver.quit();
